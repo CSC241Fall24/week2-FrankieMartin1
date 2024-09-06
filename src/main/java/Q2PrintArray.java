@@ -11,11 +11,9 @@ public class Q2PrintArray {
             return;
         }
         
-        // Print the element at index (i-1) because array is 0-based and i is 1-based
-        System.out.println(array[i - 1]);
         
-        // Recursive call with the next index
         printRecursion(i - 1);
+        System.out.println(array[i - 1]);
     }
 }
 
