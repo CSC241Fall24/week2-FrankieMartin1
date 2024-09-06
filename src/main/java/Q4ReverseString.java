@@ -6,15 +6,7 @@ public class Q4ReverseString {
             return s;
         }
 
-        // Recursive case: reverse the substring and append the first character at the end
+        // Recursive case: reverse the substring starting from index 1 and append the first character to the end
         return reverse(s.substring(1)) + s.charAt(0);
-    }
-
-    public static void main(String[] args) {
-        // Test the reverse method
-        String original = "hello";
-        String reversed = reverse(original);
-        System.out.println("Original: " + original);
-        System.out.println("Reversed: " + reversed);
     }
 }
