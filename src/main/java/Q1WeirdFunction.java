@@ -29,4 +29,15 @@ public class Q1WeirdFunction {
 
         return result;
     }
+    public class Q1WeirdFunction {
+    // Example implementations of the functions
+    public static int fRecursive(int n) {
+        return n + 1;
+    }
+
+    public static int fIterative(int n) {
+        return n + 1;
+    }
+}
+
 }
