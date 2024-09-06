@@ -11,7 +11,8 @@ public class Q3PrintArrayBackwards {
             return;
         }
         // Recursive call: print the element at index i after the recursive call
-        printRecursion(i - 1);
+        
         System.out.println(array[i]);
+        printRecursion(i - 1);
     }
 }
