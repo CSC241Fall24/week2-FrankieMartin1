@@ -1,13 +1,31 @@
 public class Q2PrintArray {
-    private static int[] array = {1, 2, 3, 4, 5, 6, 7};
-
     public static void main(String[] args) {
-        printRecursion(array.length);
+        int n = 5;  // Example: we want to print values from 0 to 4
+        System.out.println("Recursive version:");
+        printRecursion(n);  // Prints results using the recursive version
+
+        System.out.println("Iterative version:");
+        printIterative(n);  // Prints results using the iterative version
     }
 
-    private static void printRecursion(int i) {
-        // TODO: Implement the recursive method to print array elements
-        // Hint: The base case is when i <= 0
-        // Hint: Print the element before the recursive call
+    // This method will print the values using the recursive function from Q1WeirdFunction
+    private static void printRecursion(int n) {
+        if (n <= 0) {
+            return;
+        }
+
+        // First print all previous values
+        printRecursion(n - 1);
+
+        // Print the weird function result for the current value of n-1
+        System.out.println("fRecursive(" + (n - 1) + ") = " + Q1WeirdFunction.fRecursive(n - 1));
+    }
+
+    // This method will print the values using the iterative function from Q1WeirdFunction
+    private static void printIterative(int n) {
+        for (int i = 0; i < n; i++) {
+            // Print the weird function result for the current value of i
+            System.out.println("fIterative(" + i + ") = " + Q1WeirdFunction.fIterative(i));
+        }
     }
 }
