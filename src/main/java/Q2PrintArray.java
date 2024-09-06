@@ -18,14 +18,15 @@ public class Q2PrintArray {
         printRecursion(n - 1);
 
         // Print the weird function result for the current value of n-1
-        System.out.println("fRecursive(" + (n - 1) + ") = " + Q1WeirdFunction.fRecursive(n - 1));
+        System.out.println(Q1WeirdFunction.fRecursive(n - 1));
     }
 
     // This method will print the values using the iterative function from Q1WeirdFunction
     private static void printIterative(int n) {
         for (int i = 0; i < n; i++) {
             // Print the weird function result for the current value of i
-            System.out.println("fIterative(" + i + ") = " + Q1WeirdFunction.fIterative(i));
+            System.out.println(Q1WeirdFunction.fIterative(i));
         }
     }
 }
+
