@@ -1,13 +1,33 @@
 // src/main/java/Q4ReverseString.java
+// Q4ReverseString.java
 public class Q4ReverseString {
 
-    public static String reverse(String s) {
-        // Base case: If the string is empty or has only one character, return it as it is
-        if (s.length() <= 1) {
-            return s;
+    /**
+     * Reverses the given string.
+     *
+     * @param input The string to reverse.
+     * @return The reversed string.
+     */
+    public static String reverse(String input) {
+        if (input == null) {
+            throw new IllegalArgumentException("Input cannot be null");
         }
-
-        // Recursive case: Reverse the substring starting from index 1 and add the first character at the end
-        return reverse(s.substring(1)) + s.charAt(0);
+        
+        // Convert string to a char array
+        char[] characters = input.toCharArray();
+        int left = 0;
+        int right = characters.length - 1;
+        
+        // Swap characters from start and end of the array
+        while (left < right) {
+            char temp = characters[left];
+            characters[left] = characters[right];
+            characters[right] = temp;
+            left++;
+            right--;
+        }
+        
+        // Create a new string from the reversed character array
+        return new String(characters);
     }
 }
